@@ -60,22 +60,4 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-    //<<<<<<<<<<<<<<<<<<<<<<<ORDERS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-   @Test
-    public void selecting_an_item_should_return_the_price() throws itemNotFoundException{
-        int price = restaurant.getPriceOfItem(restaurant.getMenu());
-        assertEquals(388, price);
-    }
-
-    @Test
-    public void selecting_an_invalid_item_should_throw_exception() {
-        Item invalidItem = new Item("Sweet corn sop", 300);
-        List<Item> itemList = new ArrayList<Item>();
-        itemList.add(invalidItem);
-        assertThrows(itemNotFoundException.class, () -> restaurant.getPriceOfItem(itemList));
-    }
-
-    //<<<<<<<<<<<<<<<<<<<<<<<ORDERS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
