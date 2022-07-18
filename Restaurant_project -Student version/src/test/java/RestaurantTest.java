@@ -60,4 +60,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Order>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void selecting_an_item_should_return_the_price(){
+        int price = restaurant.getPriceOfItem(restaurant.getMenu());
+        assertEquals(388, price);
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<Order>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
